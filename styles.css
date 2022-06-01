@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  color: rgb(255, 255, 255); 
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);  
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 800px; 
+    flex-wrap: wrap;
+    margin: 0 auto;    
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 130px;
+    height: 130px;    
+    
+    cursor: pointer;
+    border-radius: 2px; 
+    perspective: 1000px;     
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;    
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;  
+  backface-visibility: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.flip-card img {
+    width: 100%;
+    height: 100%;    
+}
+
+.flip {
+    transform: rotateX(180deg);
+}
+
+.flip-card-back {  
+  transform: rotateX(180deg);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    gap: 140px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.end-game {
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    left: calc(50% - 400px);
+    top: calc(50% - 200px);
+    background-color: #E0C3FC;
+    padding: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items:center;
+    border: 2px solid;
+    visibility: hidden;
+}
+
+.end-game p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.end-game button {
+    padding: 10px;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    border: 2px solid;
+}
+
+.results {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 60px;
+    top: calc(50% - 150px);    
+    padding: 15px;
+    font-size: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+}
+
+.results h2 {
+    margin-bottom: 20px;
+}
+
+.results-table {
+    text-align: center;
+    width: 100%;
+}
